@@ -1,16 +1,27 @@
 <?php
-$number = '6';
-$number2 = '7';
+$number = 1;
+$number2 = 2;
+function comparaison ($numberpara, $number2para)
+{
+  if ($numberpara < $number2) {
+    $message = 'Le premier nombre est plus petit';
+  } elseif ($number1para > $number2para) {
+    $message = 'Le premier nombre est plus grand';
+  } else {
+    $message = 'les deux nombres sont identique';
+  }
+  return $message ;
+}
 ?>
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
 <head>
   <meta charset="utf-8"/>
-  <title>ex2 partie4 php</title>
+  <title>ex3 partie4 php</title>
 </head>
 <body>
-<p>Le premier nombre <?php echo $number ?> est plus grand si le premier nombre est plus grand que le deuxieme <?php echo $number2 ?></p>
-<p>Le premier nombre <?php echo $number ?> est plus petit si le premier nombre est plus petit que le deuxieme <?php echo $number2 ?></p>
-<p>Les deux nombres <?php echo $number . ' ' . $number2 ?> sont identiques si les deux nombres sont égaux </p>
+  <?php
+  $result = comparaison($number,$number2);?>
+  <p> <?php echo $result;?></p>
 </body>
 </html>
